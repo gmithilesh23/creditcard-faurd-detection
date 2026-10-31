@@ -5,10 +5,7 @@ echo  FinGuard AI | Push to GitHub (gmithilesh23)
 echo =====================================================================
 echo.
 echo Remote repository target:
-echo https://github.com/gmithilesh23/credit-card-fraud-intelligence.git
-echo.
-echo Make sure you have created the repository on https://github.com/new
-echo with the name: credit-card-fraud-intelligence
+echo https://github.com/gmithilesh23/creditcard-faurd-detection.git
 echo.
 
 set GIT_EXE=C:\Users\gmith\.local\git\cmd\git.exe
