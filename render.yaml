@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: finguard-fraud-intelligence
+    env: docker
+    plan: free
+    region: oregon
+    dockerfilePath: Dockerfile
+    healthCheckPath: /api/health
+    envVars:
+      - key: PORT
+        value: 8000
+      - key: HOST
+        value: 0.0.0.0

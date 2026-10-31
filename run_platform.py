@@ -38,16 +38,19 @@ def main():
     from backend.app.main import app
     import uvicorn
 
-    print("[3/3] Server initialized successfully!")
+    port = int(os.environ.get("PORT", 8000))
+    host = os.environ.get("HOST", "0.0.0.0")
+
+    print(f"\n[3/3] Server initialized successfully on {host}:{port}!")
     print("\n" + "=" * 68)
-    print("  >> FinGuard Web Dashboard : http://localhost:8000")
-    print("  >> Interactive API Docs   : http://localhost:8000/docs")
-    print("  >> API Health Status      : http://localhost:8000/api/health")
+    print(f"  >> FinGuard Web Dashboard : http://localhost:{port}")
+    print(f"  >> Interactive API Docs   : http://localhost:{port}/docs")
+    print(f"  >> API Health Status      : http://localhost:{port}/api/health")
     print("=" * 68 + "\n")
     print("Server is active and listening for requests.")
     print("Keep this terminal window open. (Press Ctrl+C to stop)\n")
 
-    uvicorn.run(app, host="127.0.0.1", port=8000, log_level="info")
+    uvicorn.run(app, host=host, port=port, log_level="info")
 
 
 if __name__ == "__main__":
